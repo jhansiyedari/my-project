@@ -1,11 +1,15 @@
-<html>
-    <head>
-       <title> welcome </title>
-<body>
-    <center>
-         <h1> welcome to devops </h1>
-    </center>
-</body>
-</html>
-       
+resource "aws_instance" "jhansi" {
+    ami = "ami-052efd3df9dad4825" 
+ 
+    instance_type = t2.micro
+    count = 1
+    subnet_id = "subnet-0a4a00236cb87619c"
+
+    tags = {
+        Name = "jhansi"
+        
+    
+    }
+}
+
        
